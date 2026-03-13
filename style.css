@@ -1,0 +1,76 @@
+#container{
+    background-color:rgba(36, 170, 159, 0.808);
+    border: 1px solid black;
+    border-radius: 15px;
+}
+
+h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(250, 235, 215, 0.877)
+}
+
+#hero{
+    height: 80vh;
+    background: radial-gradient(circle at top, #4eb5d4dc, black);
+    margin-top: auto;
+}
+
+#card-titulo h2{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(250, 235, 215, 0.925)
+}
+
+#card-titulo:hover{
+    background-color: #275a69dc;
+    transition: linear 0.5s;
+}
+#card-titulo{
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+#cards{
+    margin-top: 20px;
+}
+
+#card-explicacao{
+    display: flex;
+   
+}
+
+.card h2{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(250, 235, 215, 0.897)
+}
+.card span{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(250, 235, 215, 0.719);
+}
+.card:hover{
+    background-color: #275a69dc;
+    transition: linear 0.5s;
+}
+.card{
+    flex: 1;
+    border: 2px solid rgb(5, 5, 5);
+    padding: 15px;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+#hero-container{
+    margin-top: 3em;
+}
+
+#card2{
+    background-color: #4eb5d4dc;
+    border: 1px solid black;
+    border-radius: 15px;
+}
