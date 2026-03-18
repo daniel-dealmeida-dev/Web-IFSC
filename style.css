@@ -1,76 +1,164 @@
-#container{
-    background-color:rgba(36, 170, 159, 0.808);
-    border: 1px solid black;
-    border-radius: 15px;
+/*Geral */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #1c1c1c;
+    color: rgba(250, 235, 215, 0.9);
 }
 
-h1{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgba(250, 235, 215, 0.877)
+h1, h2, h3 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgba(250, 235, 215, 0.9);
 }
 
-#hero{
+/*Header*/
+#hero {
     height: 80vh;
-    background: radial-gradient(circle at top, #4eb5d4dc, black);
+    background: radial-gradient(circle at top, #3c7d91dc, rgb(0, 0, 0));
     margin-top: auto;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#card-titulo h2{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgba(250, 235, 215, 0.925)
+#hero-container {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
 }
 
-#card-titulo:hover{
-    background-color: #275a69dc;
-    transition: linear 0.5s;
+/* Cards */
+#cards {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
 }
-#card-titulo{
+
+
+
+
+
+mark {
+    background-color: #5484cc99;
+    color: rgba(250, 235, 215, 0.95);
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Links */
+a {
+    color: #6fa8dc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #9fd3ff;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #b58cff;
+}
+
+
+
+#card-titulo {
     border: 2px solid black;
     text-align: center;
-    padding: 10px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    padding: 15px;
+    margin: 0 20px 20px 20px;
     border-radius: 10px;
+    transition: background-color 0.5s linear;
 }
 
-#cards{
-    margin-top: 20px;
+#card-titulo:hover {
+    background-color: #17242edc;
 }
 
-#card-explicacao{
+#card-explicacao {
     display: flex;
-   
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.card h2{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgba(250, 235, 215, 0.897)
-}
-.card span{
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: rgba(250, 235, 215, 0.719);
-}
-.card:hover{
-    background-color: #275a69dc;
-    transition: linear 0.5s;
-}
-.card{
+.card {
     flex: 1;
     border: 2px solid rgb(5, 5, 5);
     padding: 15px;
     text-align: center;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
     border-radius: 10px;
 }
 
-#hero-container{
-    margin-top: 3em;
+.card:hover {
+    background-color: #132930dc;
+    transition: linear 0.5s;
 }
 
-#card2{
+.card h2 {
+    color: rgba(250, 235, 215, 0.9);
+}
+
+.card span {
+    color: rgba(250, 235, 215, 0.75);
+}
+
+/*Container da História*/
+#container {
     background-color: #4eb5d4dc;
-    border: 1px solid black;
-    border-radius: 15px;
+    background: radial-gradient(circle at right, #45899edc, rgb(29, 42, 46));
+    padding: 25px;
+    margin: 5px auto;
+    max-width: 1200px;
+    text-align: left;
+   
+}
+
+
+/* títulos */
+#container h2{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* parágrafos */
+#container p {
+    margin-bottom: 15px;
+}
+
+/* listas */
+ul, ol {
+    margin-left: 35px;
+    margin-bottom: 20px;
+}
+
+/* descrição */
+dl dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+dl dd {
+    margin-left: 20px;
+    margin-bottom: 8px;
+}
+
+/* tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+}
+
+th, td, caption {
+    border: 2px solid #1369a3; 
+    padding: 8px;
 }
