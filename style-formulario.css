@@ -1,0 +1,91 @@
+#contatos{
+    min-height: 100vh;
+    text-align: center;
+    padding: 40px 20px;
+    background: #020617;
+}
+
+#contatos h2{
+    color: #34d399;
+    margin-bottom: 10px;
+}
+
+#contatos p{
+    color:#6ee7b7;
+    margin-bottom: 20px;
+}
+
+#contatos h3{
+    margin-top: 40px;
+    color: #34d399;
+}
+
+
+.form-contato{
+    max-width: 500px;
+    margin: 30px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.form-contato label{
+    text-align: left;
+    font-size: 0.9em;
+    color: #6ee7b7;
+}
+
+/* Inputs */
+.form-contato input,
+.form-contato select,
+.form-contato textarea{
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid #065f46;
+    background-color: #020617;
+    color: #d1fae5;
+    font-size: 0.9em;
+    outline: none;
+    transition: 0.2s;
+}
+
+/* Placeholder */
+.form-contato input::placeholder,
+.form-contato textarea::placeholder{
+    color: #6ee7b7;
+    opacity: 0.6;
+}
+
+/* Focus */
+.form-contato input:focus,
+.form-contato select:focus,
+.form-contato textarea:focus{
+    border: 1px solid #34d399;
+    box-shadow: 0 0 0 1px #34d399;
+}
+
+/* Botão */
+.form-contato button{
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #34d399;
+    border: none;
+    border-radius: 10px;
+    color: #020617;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.form-contato button:hover{
+    background-color: #10b981;
+}
+
+
+.footer{
+     height: 10vh;
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    color: #9ca3af;
+}
