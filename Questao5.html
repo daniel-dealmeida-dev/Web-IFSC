@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LQuestao5x</title>
+    <style>
+      
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ocupa 100% da altura da janela */
+            font-family: Arial, sans-serif;
+        }
+
+     
+        header, footer {
+            background-color: #93c90e; 
+            padding: 20px;
+            height: 100px;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        /* Container central que alinha Article, Aside e Nav na horizontal */
+        .main-container {
+            display: flex;
+            flex: 1; /* Faz esta secção crescer para ocupar o espaço disponível */
+        }
+
+        article {
+            flex: 3; /* Ocupa 3 partes do espaço (mais largo) */
+            background-color: #ffffff;
+            padding: 20px;
+        }
+
+        aside {
+            flex: 1; /* Ocupa 1 parte do espaço */
+            background-color: #f9f5e3; /* Creme claro */
+            padding: 20px;
+        }
+
+        nav {
+            flex: 1; /* Ocupa 1 parte do espaço */
+            background-color: #d6e3d1; /* Verde acinzentado claro */
+            padding: 20px;
+        }
+
+        /* Estilo do texto */
+        header, footer, article, aside, nav {
+            font-size: 1.2rem;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <header>Header</header>
+
+    <div class="main-container">
+        <article>Article</article>
+        <aside>Aside</aside>
+        <nav>Nav</nav>
+    </div>
+
+    <footer>Footer</footer>
+
+</body>
+</html>

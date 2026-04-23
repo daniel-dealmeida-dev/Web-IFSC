@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Questao4</title>
+
+<style>
+body {
+    margin: 0;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Container geral */
+.container {
+    display: flex;
+    gap: 15px;
+}
+
+/* Transição suave */
+.main-card,
+.small-card {
+    transition: all 0.4s ease;
+}
+
+/* Quando passa o mouse no container (todos diminuem) */
+.container:hover .main-card,
+.container:hover .small-card {
+    transform: scale(0.9);
+    opacity: 0.6;
+}
+
+/* Card principal em destaque */
+.main-card:hover {
+    transform: scale(1.1) !important;
+    opacity: 1 !important;
+    z-index: 10;
+}
+
+/* Cards pequenos em destaque */
+.small-card:hover {
+    transform: scale(1.1) !important;
+    opacity: 1 !important;
+    z-index: 10;
+}
+
+/* Card principal */
+.main-card {
+    width: 400px;
+    height: 250px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    background: url('https://picsum.photos/600/400?random=1') center/cover;
+}
+
+/* Info dentro do card */
+.main-info {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 14px;
+}
+
+/* Coluna lateral */
+.side {
+    display: flex;
+    gap: 10px;
+}
+
+/* Cards pequenos */
+.small-card {
+    width: 70px;
+    height: 250px;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Imagens */
+.img1 { background-image: url('https://picsum.photos/200/400?random=2'); }
+.img2 { background-image: url('https://picsum.photos/200/400?random=3'); }
+.img3 { background-image: url('https://picsum.photos/200/400?random=4'); }
+
+/* Ícone */
+.icon {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: white;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Card principal -->
+    <div class="main-card">
+        <div class="main-info">
+            <strong>Oretelmauw</strong><br>
+            Omuke trughte a outfa
+        </div>
+    </div>
+
+    <!-- Cards laterais -->
+    <div class="side">
+        <div class="small-card img1">
+            <div class="icon"></div>
+        </div>
+        <div class="small-card img2">
+            <div class="icon"></div>
+        </div>
+        <div class="small-card img3">
+            <div class="icon"></div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
