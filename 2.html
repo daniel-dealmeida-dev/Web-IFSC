@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 2</title>
+
+    <style>
+        @keyframes mudarCor {
+            from {
+                background-color: lightblue;
+            }
+
+            to {
+                background-color: lightgreen;
+            }
+        }
+
+        button {
+            padding: 10px 20px;
+            border: solid 1px black;
+            cursor: pointer;
+            animation: mudarCor 1s infinite;
+        }
+
+        
+        button:hover {
+                animation: none;
+                background-color: yellow;;
+
+        }
+
+        
+        p::before {
+            content: "→ ";
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>O que é uma regra CSS?</h1>
+
+    <p>
+        Uma regra CSS é usada para definir o estilo de um elemento HTML.
+        Ela é formada por três partes principais:
+    </p>
+
+    <ul>
+        <li><strong>Seletor:</strong> indica qual elemento será estilizado (ex: button).</li>
+        <li><strong>Propriedade:</strong> define o que será alterado (ex: background-color).</li>
+        <li><strong>Valor:</strong> indica como será a alteração (ex: yellow).</li>
+    </ul>
+
+    <p>
+        Exemplo: no código "button:hover { background-color: yellow; }",
+        o seletor é button:hover, a propriedade é background-color
+        e o valor é yellow.
+    </p>
+
+    <button>Botão com animação</button>
+
+</body>
+</html>
