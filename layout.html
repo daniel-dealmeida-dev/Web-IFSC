@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 2fr 1fr 2fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 5px;
+            padding: 10px;
+            background: #f2f2f2;
+        }
+
+        .box {
+            border: 1px solid white;
+        }
+
+        .laranja {
+            background: orange;
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        .azul {
+            background: lightsteelblue;
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .amarelo {
+            background: goldenrod;
+            grid-column: 1 / 3;
+            grid-row: 3;
+        }
+
+        .rosa {
+            background: #d8a89a;
+            grid-column: 2;
+            grid-row: 1 / 3;
+        }
+
+        .verde {
+            background: #b7c86d;
+            grid-column: 3;
+            grid-row: 2 / 4;
+        }
+
+        .cinza {
+            background: #c7d6d6;
+            grid-column: 3;
+            grid-row: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box laranja"></div>
+    <div class="box azul"></div>
+    <div class="box amarelo"></div>
+    <div class="box rosa"></div>
+    <div class="box verde"></div>
+    <div class="box cinza"></div>
+
+</body>
+</html>
