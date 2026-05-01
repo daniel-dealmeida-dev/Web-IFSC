@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 5b</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            padding: 15px;
+            gap: 10px;
+        }
+
+        .bloco {
+            border-radius: 4px;
+        }
+
+        .col-1 {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .item-laranja { background-color: #f39c12; flex: 2; }
+        .item-azul { background-color: #b9c9de; flex: 1.5; }
+        .item-laranja-claro { background-color: #f1b340; flex: 1.2; }
+
+        .col-2 {
+            flex: 1.5;
+            background-color: #f5bca9;
+        }
+
+        .col-3 {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .item-verde-agua { background-color: #d1e0db; flex: 1.5; }
+        .item-verde-limao { background-color: #b4cc74; flex: 2.5; }
+
+        .col-4 {
+            flex: 0.4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15px;
+            align-items: center;
+        }
+        .circulo {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+        }
+        .c1 { background-color: #f0956b; }
+        .c2 { background-color: #d1a9ad; }
+        .c3 { background-color: #c9d1af; }
+        .c4 { background-color: #d1c9e3; }
+
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+                height: auto;
+                
+            }
+
+            .col-1, .col-3, .col-4 {
+                display: flex;
+                flex-direction: column;
+                flex: none;
+                width: 100%;
+               
+            }
+
+            .bloco, .col-2 {
+                width: 100%;
+                height: 150px;
+                flex: none;
+            }
+
+            .item-laranja, .item-azul, .item-laranja-claro, .item-verde-agua, .item-verde-limao {
+                height: 150px;
+                flex: none;
+            }
+
+            .col-4 {
+                flex-direction: column;
+                padding: 10px 0;
+            }
+        }
+    </style>
+ head>
+<body>
+
+    <div class="container">
+        <div class="col-1">
+            <div class="bloco item-laranja"></div>
+            <div class="bloco item-azul"></div>
+            <div class="bloco item-laranja-claro"></div>
+        </div>
+
+        <div class="bloco col-2"></div>
+
+        <div class="col-3">
+            <div class="bloco item-verde-agua"></div>
+            <div class="bloco item-verde-limao"></div>
+        </div>
+
+        <div class="col-4">
+            <div class="circulo c1"></div>
+            <div class="circulo c2"></div>
+            <div class="circulo c3"></div>
+            <div class="circulo c4"></div>
+        </div> 
+    </div>
+
+</body>
+</html>

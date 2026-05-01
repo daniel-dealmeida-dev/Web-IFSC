@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 5</title>
+    <style>
+  
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: sans-serif;
+        }
+
+
+        .container {
+            display: flex;
+            height: 100vh;
+            padding: 10px;
+            gap: 10px;
+        }
+        .bloco {
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: transparent;
+        }
+
+        .col-1 {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .item-laranja { background-color: #f39c12; flex: 2; }
+        .item-azul { background-color: #3498db; flex: 1; }
+        .item-laranja-claro { background-color: #f1c40f; flex: 1; }
+
+        .col-2 {
+            flex: 1.5;
+            background-color: #e67e22; /* Cor de pêssego/rosa */
+            height: 100%;
+        }
+
+        .col-3 {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .item-verde-agua { background-color: #1abc9c; flex: 1; }
+        .item-verde-limao { background-color: #27ae60; flex: 2; }
+
+        .col-4 {
+            flex: 0.5;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .circulo {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+        .c1 { background-color: #e67e22; }
+        .c2 { background-color: #95a5a6; }
+        .c3 { background-color: #bdc3c7; }
+        .c4 { background-color: #9b59b6; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="col-1">
+            <div class="bloco item-laranja"></div>
+            <div class="bloco item-azul"></div>
+            <div class="bloco item-laranja-claro"></div>
+        </div>
+
+        <div class="bloco col-2"></div>
+
+        <div class="col-3">
+            <div class="bloco item-verde-agua"></div>
+            <div class="bloco item-verde-limao"></div>
+        </div>
+
+        <div class="col-4">
+            <div class="circulo c1"></div>
+            <div class="circulo c2"></div>
+            <div class="circulo c3"></div>
+            <div class="circulo c4"></div>
+        </div>
+    </div>
+
+</body>
+</html>
