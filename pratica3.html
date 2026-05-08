@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    
+    <script>
+        const nome = "ana";
+        const idade1 = 17;
+        const curso = "Informática";
+
+        console.log(`<p> meu nome é <b> ${nome}</b>, tenho <b> ${idade1}</b>,anos e estudo <b> ${curso} </b></p>`)
+        document.body.innerHTML = `<p> meu nome é <b> ${nome}</b>, tenho <b> ${idade1}</b>,anos e estudo <b> ${curso} </b></p>`
+    </script>
+    <br>
+    <br>
+    <br>
+    <script>
+        const nota1 = 9;
+        const nota2 = 8;
+        const calc = (nota1+nota2)/2;
+
+        console.log(`A média do aluno é ${calc}`)
+        document.body.innerHTML = `A média do aluno é ${calc}`
+
+        let dia =4;
+
+        
+
+    switch (dia) {
+    case 1: console.log("Domingo");
+    break;
+    case 2: console.log ("Segunda");
+    break;
+    case 3: console.log ("Terça"); 
+    break;
+    case 4: console.log ("Quarta");
+    break;
+    case 5: console.log ("Quinta");
+    break;
+    case 6: console.log ("Sexta");
+    break;
+    case 7: console.log ("Sábado");
+    break;
+    default: console.log ("Dia inválido");
+}
+
+const idade = 18;
+
+function verAdulto(idade) {
+    if (idade < 12) {
+        return "É uma criança"; 
+    }
+    if (idade < 18) {
+        return "É um adolescente";
+    }
+    return "Adulto"; 
+}
+
+
+console.log(verAdulto(idade)); 
+
+
+const nota = 6
+
+function verNota(nota){
+    if (nota>=9){
+    return "Excelente";
+    }
+
+    if (nota <= 8.9 && nota>=7){
+        return "Bom";
+    }
+    if (nota <= 6.9 && nota>=6){
+        return "Regular";
+    }
+    return "Reprovado";
+
+}
+console.log(verNota(nota));
+console.clear();
+
+for (let i = 0; i <= 10; i++) {
+    console.log(`Contando ${i}`)
+    
+}
+console.clear();
+
+let j = 0;
+while (j<=10){
+    console.log(`Contando ${j}`);
+    j++;
+}
+
+
+
+function somarNumeros
+
+    </script>
+</body>
+</html>
