@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4a - Display</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .caixa {
+            width: 100%;
+            height: 60px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+            font-size: 1.5rem;
+        }
+
+        .roxo   { background-color: #6a1bbf; }
+        .verde  { background-color: #2e7d32; }
+        .vermelho { background-color: #d32f2f; }
+        .amarelo { background-color: #fdd835; color: black; }
+    </style>
+</head>
+<body>
+    <div class="caixa roxo">1</div>
+    <div class="caixa verde">2</div>
+    <div class="caixa vermelho">3</div>
+    <div class="caixa amarelo">4</div>
+
+    <p style="font-family: Arial, sans-serif; margin: 1rem;">
+        Explicação: div é um elemento block por padrão. Um elemento block ocupa toda a largura
+        disponível do pai e sempre força uma quebra de linha antes e depois dele, por isso as
+        4 caixas ficam empilhadas verticalmente, uma embaixo da outra.
+    </p>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Exemplo especificidade de seletores</title>
+    <style>
+        li {
+            color: red;
+        }
+
+        .churras {
+            color: green;
+        }
+
+        .fruta {
+            color: gray
+        }
+
+        li+li.churras {
+            color: black;
+        }
+
+        .churras[draggable="true"] {
+            color: magenta;
+        }
+
+        #lip1,
+        #lip2,
+        #lip3 {
+            color: blue
+        }
+
+        #lip3.fruta {
+            color: orange
+        }
+
+        ol>li.churras#lip5 {
+            color: purple
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+        }
+
+        .explicacao {
+            margin-top: 2rem;
+        }
+
+        .explicacao p {
+            background: #f4f4f4;
+            padding: 8px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <ol>
+        <li id="lip0">Abacaxi</li>
+        <li class="fruta">Melão</li>
+        <li id="lip2" class="fruta">Pera</li>
+        <li id="lip3" class="fruta">Uva</li>
+        <li id="lip4" class="fruta">Maçã</li>
+        <li class="churras">Carne</li>
+        <li class="churras">Linguiça</li>
+        <li id="lip7" class="churras" draggable="true">Pão de alho</li>
+    </ol>
+
+    <div class="explicacao">
+        <h2>Por que cada cor foi aplicada</h2>
+
+        <p><b>Abacaxi (id="lip0")</b>: só a regra 1 (li) se aplica. Nenhuma outra regra cita esse id ou alguma classe.
+            Cor final: <b style="color:red">vermelho</b>.</p>
+
+        <p><b>Melão (class="fruta")</b>: regras 1 (li) e 3 (.fruta) se aplicam. Classe tem mais especificidade que tipo,
+            então a regra 3 vence. Cor final: <b style="color:gray">cinza</b>.</p>
+
+        <p><b>Pera (id="lip2", class="fruta")</b>: regras 1, 3 e 6 (#lip2) se aplicam. Id tem mais especificidade que
+            classe e tipo, então a regra 6 vence. Cor final: <b style="color:blue">azul</b>.</p>
+
+        <p><b>Uva (id="lip3", class="fruta")</b>: regras 1, 3, 6 (#lip3) e 7 (#lip3.fruta) se aplicam. A regra 7 combina
+            id + classe, ficando mais específica que a regra 6 (só id). Cor final: <b style="color:orange">laranja</b>.
+        </p>
+
+        <p><b>Maçã (id="lip4", class="fruta")</b>: regras 1 e 3 se aplicam. Nenhuma regra de id cita "lip4", então a
+            mais específica é a 3 (classe). Cor final: <b style="color:gray">cinza</b>.</p>
+
+        <p><b>Carne (class="churras")</b>: regras 1, 2 e 4 (li+li.churras) se aplicam, pois o item anterior também é um
+            &lt;li&gt;. A regra 4 tem dois seletores de tipo + uma classe, ficando mais específica que a regra 2 (só
+            classe). Cor final: <b>preto</b>.</p>
+
+        <p><b>Linguiça (class="churras")</b>: mesma situação da Carne — o item anterior também é &lt;li&gt;, então a
+            regra 4 vence de novo. Cor final: <b>preto</b>.</p>
+
+        <p><b>Pão de alho (id="lip7", class="churras", draggable="true")</b>: regras 1, 2, 4 e 5
+            (.churras[draggable="true"]) se aplicam. A regra 5 combina classe + atributo (duas seletores de "classe"),
+            ficando mais específica que a regra 4 (uma classe + dois tipos). Nenhuma regra de id cita "lip7". Cor final:
+            <b style="color:magenta">magenta</b>.</p>
+
+        <p><i>Observação: a regra 8 (ol&gt;li.churras#lip5) nunca é aplicada porque não existe nenhum elemento com
+                id="lip5" no documento.</i></p>
+    </div>
+</body>
+
+</html>

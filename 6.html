@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Barquinho no Mar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 2rem;
+            background-color: #eee;
+        }
+
+        .cena {
+            position: relative;
+            width: 700px;
+            height: 400px;
+            overflow: hidden;
+            border-radius: 8px;
+            background: linear-gradient(to bottom, #4fa8e0 0%, #bdeaf7 70%, #bdeaf7 100%);
+        }
+
+        /* nuvem */
+        .nuvem {
+            position: absolute;
+            top: 50px;
+            left: -150px;
+            width: 100px;
+            height: 35px;
+            background-color: white;
+            border-radius: 50px;
+            box-shadow:
+                25px -15px 0 0 white,
+                55px -8px 0 -5px white,
+                20px 10px 0 5px white;
+            opacity: 0.9;
+            animation: moveNuvem 22s linear infinite;
+        }
+
+        @keyframes moveNuvem {
+            from { left: -150px; }
+            to { left: 110%; }
+        }
+
+        /* mar */
+        .mar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 140px;
+            background: linear-gradient(to bottom, #1e6fa8, #0d3b66);
+            overflow: hidden;
+        }
+
+        .mar::before,
+        .mar::after {
+            content: "";
+            position: absolute;
+            width: 200%;
+            height: 30px;
+            left: 0;
+            background: radial-gradient(circle, rgba(255,255,255,0.25) 30%, transparent 60%);
+            background-size: 60px 30px;
+            animation: moveOndas 6s linear infinite;
+        }
+
+        .mar::before {
+            top: 10px;
+        }
+
+        .mar::after {
+            top: 35px;
+            animation-duration: 9s;
+            opacity: 0.6;
+        }
+
+        @keyframes moveOndas {
+            from { transform: translateX(0); }
+            to { transform: translateX(-60px); }
+        }
+
+        /* barquinho */
+        .barco {
+            position: absolute;
+            bottom: 95px;
+            left: -150px;
+            width: 130px;
+            height: 90px;
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScyMDAnIGhlaWdodD0nMTQwJyB2aWV3Qm94PScwIDAgMjAwIDE0MCc+CiAgPHBhdGggZD0nTTIwLDEwMCBRMTAwLDEzOCAxODAsMTAwIEwxNjAsODIgTDQwLDgyIFonIGZpbGw9JyNmZGZkZmQnIHN0cm9rZT0nIzM0NDk1ZScgc3Ryb2tlLXdpZHRoPSczJy8+CiAgPHJlY3QgeD0nOTYnIHk9JzE4JyB3aWR0aD0nNScgaGVpZ2h0PSc2NicgZmlsbD0nIzZiNDQyMycvPgogIDxwYXRoIGQ9J00xMDEsMjAgTDEwMSw3OCBMMTUyLDc4IFonIGZpbGw9JyMyOTgwYjknLz4KICA8cGF0aCBkPSdNOTYsMjAgTDk2LDc4IEw1NSw3OCBaJyBmaWxsPScjZWNmMGYxJyBzdHJva2U9JyNiZGMzYzcnIHN0cm9rZS13aWR0aD0nMScvPgogIDxwYXRoIGQ9J00xMDEsMTggTDEwMSwzMCBMMTIwLDI0IFonIGZpbGw9JyNlNzRjM2MnLz4KPC9zdmc+Cg==");
+            background-size: contain;
+            background-repeat: no-repeat;
+            z-index: 5;
+            transform-origin: center bottom;
+            animation: moveBarco 12s linear infinite, balancarBarco 2s ease-in-out infinite;
+        }
+
+        @keyframes moveBarco {
+            from { left: -150px; }
+            to { left: 110%; }
+        }
+
+        @keyframes balancarBarco {
+            0%, 100% { transform: rotate(-4deg); }
+            50% { transform: rotate(4deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="cena">
+        <div class="nuvem"></div>
+        <div class="barco"></div>
+        <div class="mar"></div>
+    </div>
+</body>
+</html>
