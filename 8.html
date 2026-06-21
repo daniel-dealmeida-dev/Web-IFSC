@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cor de Fundo</title>
+</head>
+<body>
+    <h1>Clique para mudar a cor</h1>
+    <button id="btn">Mudar cor</button>
+    <p id="corAtual"></p>
+
+    <script>
+        let button = document.querySelector("#btn")
+
+        button.addEventListener("click", () => {
+            let r = Math.floor(Math.random() * 256)
+            let g = Math.floor(Math.random() * 256)
+            let b = Math.floor(Math.random() * 256)
+            let cor = "rgb(" + r + "," + g + "," + b + ")"
+
+            document.body.style.backgroundColor = cor
+            document.getElementById("corAtual").innerHTML = "Cor atual: " + cor
+
+            navigator.clipboard.writeText(cor)
+        })
+    </script>
+</body>
+</html>

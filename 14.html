@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Captura de Teclas do Teclado</h1>
+    <div id="saida" style="border: 1px solid black; height: 50vh;"></div>
+    <div id="status" style="border: 1px solid black; height: 1rem;"></div>
+
+    <script>
+        let saida = document.querySelector("#saida")
+        let status = document.querySelector("#status")
+
+        document.addEventListener("keydown", (evento) => {
+            console.log(evento.key)
+
+            if (evento.key === "Backspace") {
+                saida.innerHTML = saida.innerHTML.slice(0, -1)
+            } else if (evento.key.length === 1) {
+                saida.innerHTML += evento.key
+            }
+
+            status.innerHTML = "Última tecla: " + evento.key + " code: " + evento.code
+        })
+    </script>
+</body>
+</html>

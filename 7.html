@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Palíndromo</title>
+</head>
+<body>
+    <h1>Verificador de Palíndromo</h1>
+
+    <input type="text" id="palavra">
+    <button id="btn">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        let button = document.querySelector("#btn")
+
+        button.addEventListener("click", () => {
+            let palavra = document.getElementById("palavra").value.toLowerCase()
+            let invertida = palavra.split("").reverse().join("")
+
+            if (palavra === invertida) {
+                document.getElementById("resultado").innerHTML = palavra + " é palíndromo"
+            } else {
+                document.getElementById("resultado").innerHTML = palavra + " não é palíndromo"
+            }
+        })
+    </script>
+</body>
+</html>

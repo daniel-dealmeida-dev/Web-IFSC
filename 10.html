@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+            font-family: Arial, sans-serif;
+        }
+
+        #calculadora {
+            background-color: #a8d8d8;
+            padding: 20px;
+            border-radius: 12px;
+            width: 250px;
+        }
+
+        #display {
+            background-color: #1c1c1c;
+            color: white;
+            font-size: 2rem;
+            text-align: right;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+            min-height: 1.5em;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 8px;
+        }
+
+        button {
+            background-color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.2rem;
+            padding: 15px 0;
+            cursor: pointer;
+        }
+
+        .operador {
+            background-color: white;
+            color: #333;
+        }
+
+        .igual {
+            background-color: #ff7043;
+            color: white;
+            grid-row: span 4;
+        }
+
+        .zero {
+            grid-column: span 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="calculadora">
+        <div id="display">0</div>
+
+        <div class="grid">
+            <button class="operador" data-valor="+">+</button>
+            <button class="operador" data-valor="-">-</button>
+            <button class="operador" data-valor="*">×</button>
+            <button class="operador" data-valor="/">÷</button>
+
+            <button class="numero" data-valor="7">7</button>
+            <button class="numero" data-valor="8">8</button>
+            <button class="numero" data-valor="9">9</button>
+            <button id="btnIgual" class="igual">=</button>
+
+            <button class="numero" data-valor="4">4</button>
+            <button class="numero" data-valor="5">5</button>
+            <button class="numero" data-valor="6">6</button>
+
+            <button class="numero" data-valor="1">1</button>
+            <button class="numero" data-valor="2">2</button>
+            <button class="numero" data-valor="3">3</button>
+
+            <button class="numero" data-valor="0">0</button>
+            <button class="numero" data-valor=".">.</button>
+            <button id="btnAC">AC</button>
+        </div>
+    </div>
+
+    <script>
+        let display = document.getElementById("display")
+        let expressao = ""
+
+        let botoesNumeros = document.querySelectorAll(".numero")
+        let botoesOperadores = document.querySelectorAll(".operador")
+
+        botoesNumeros.forEach(botao => {
+            botao.addEventListener("click", () => {
+                expressao += botao.dataset.valor
+                display.innerHTML = expressao
+            })
+        })
+
+        botoesOperadores.forEach(botao => {
+            botao.addEventListener("click", () => {
+                expressao += botao.dataset.valor
+                display.innerHTML = expressao
+            })
+        })
+
+        document.getElementById("btnIgual").addEventListener("click", () => {
+            let resultado = eval(expressao)
+            display.innerHTML = resultado
+            expressao = resultado.toString()
+        })
+
+        document.getElementById("btnAC").addEventListener("click", () => {
+            expressao = ""
+            display.innerHTML = "0"
+        })
+    </script>
+</body>
+</html>
